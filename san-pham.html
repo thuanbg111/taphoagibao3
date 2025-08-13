@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản phẩm - Tạp Hóa Gia Bảo</title>
+  <style>
+    :root{--primary:#0f766e;--blue:#2563eb;--border:#e5e7eb;--shadow:0 6px 24px rgba(2,44,34,.10)}
+
+    /* NEW: đảm bảo footer dính đáy */
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      display:flex;              /* bố cục cột */
+      flex-direction:column;
+      min-height:100vh;          /* cao tối thiểu bằng chiều cao viewport */
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#1f2937;background:#f7fafc;
+    }
+    main{ flex:1; }              /* đẩy footer xuống đáy */
+
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--blue));
+      color:#fff;text-align:center;padding:18px 10px;box-shadow:var(--shadow)
+    }
+    header h1{margin:0 0 6px;font-size:24px}
+    header p{margin:4px;opacity:.92;font-size:13px}
+	nav{margin-top:8px}
+    nav a{
+      color:#fff;text-decoration:none;font-weight:600;margin:0 8px;
+      padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.12)
+    }
+    nav a:hover{background:rgba(255,255,255,.2)}
+
+    .wrap{max-width:1040px;margin:auto;padding:18px}
+    h2{color:#0f766e;text-align:center;margin:18px 0}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .item{
+      background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);
+      overflow:hidden;transition:transform .2s ease
+    }
+    .item:hover{transform:translateY(-2px)}
+    .item img{width:100%;height:190px;object-fit:cover;display:block}
+    .item h3{margin:10px 0 0;text-align:center;color:#0f766e}
+    .item p{margin:8px 12px 16px;text-align:center;color:#374151;font-size:14px}
+
+    @media(max-width:992px){ .grid{grid-template-columns:repeat(2,1fr)} }
+    @media(max-width:768px){
+      .grid{grid-template-columns:1fr}
+      header h1{font-size:20px}
+    }
+
+    footer{
+      background:#0b3b36;color:#e6fffb;text-align:center;padding:14px 10px;margin-top:24px
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>HỘ KINH DOANH TẠP HÓA GIA BẢO</h1>
+  <p>Bán lẻ hàng hóa tổng hợp – Xã Nam Hồng, Tiền Hải, Thái Bình</p>
+  <nav>
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+    <a href="san-pham.html">Sản phẩm</a>
+    <a href="lien-he.html">Liên hệ</a>
+</nav>
+
+  </nav>
+</header>
+
+<main class="wrap">
+  <h2>Danh mục hàng bán</h2>
+  <div class="grid">
+    <article class="item">
+      <img src="images/danh-muc-nhu-yeu-pham.jpg" alt="Nhu yếu phẩm" loading="lazy">
+      <h3>Nhu yếu phẩm</h3>
+      <p>Gạo, mì tôm, dầu ăn, nước mắm, gia vị, giấy vệ sinh…</p>
+    </article>
+    <article class="item">
+      <img src="images/danh-muc-do-uong.jpg" alt="Đồ uống & Sữa" loading="lazy">
+      <h3>Đồ uống & Sữa</h3>
+      <p>Nước giải khát, sữa tươi/tiệt trùng, cà phê lon, bia…</p>
+    </article>
+    <article class="item">
+      <img src="images/sp-hoa-my-pham.jpg" alt="Hóa mỹ phẩm" loading="lazy">
+      <h3>Hóa mỹ phẩm</h3>
+      <p>Bột giặt, nước rửa chén, dầu gội, sữa tắm, nước lau nhà…</p>
+    </article>
+    <article class="item">
+      <img src="images/sp-banh-keo.jpg" alt="Bánh kẹo" loading="lazy">
+      <h3>Bánh kẹo</h3>
+      <p>Bim bim, kẹo, socola, bánh quy, snack…</p>
+    </article>
+    <article class="item">
+      <img src="images/sp-gia-dung.jpg" alt="Đồ gia dụng" loading="lazy">
+      <h3>Đồ gia dụng</h3>
+      <p>Chậu thau, cốc ca, muôi thìa, ổ điện, bóng đèn, pin…</p>
+    </article>
+    <article class="item">
+      <img src="images/sp-tien-ich.jpg" alt="Tiện ích" loading="lazy">
+      <h3>Tiện ích</h3>
+      <p>Thẻ điện thoại, thẻ data, văn phòng phẩm nhỏ lẻ…</p>
+    </article>
+  </div>
+</main>
+
+<footer>
+  © 2025 Tạp Hóa Gia Bảo – Xóm 2, Thôn Đông Biên Bắc, Xã Nam Hồng, Huyện Tiền Hải, Tỉnh Thái Bình, Việt Nam – SĐT: 0335627087
+</footer>
+</body>
+</html>

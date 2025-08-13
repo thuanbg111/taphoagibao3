@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liên hệ - Tạp Hóa Gia Bảo</title>
+  <style>
+    :root{
+      --primary:#0f766e; --blue:#2563eb; --border:#e5e7eb;
+      --shadow:0 6px 24px rgba(2,44,34,.10);
+    }
+
+    /* ===== Layout khung để footer bám đáy ===== */
+    html,body{height:100%}
+    body{
+      margin:0;
+      display:flex;                    /* giúp footer dính đáy */
+      flex-direction:column;
+      min-height:100vh;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:#1f2937; line-height:1.7; background:#f7fafc;
+    }
+    main{flex:1}                        /* đẩy footer xuống đáy */
+
+    /* ===== Header ===== */
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--blue));
+      color:#fff;text-align:center;padding:18px 10px;box-shadow:var(--shadow)
+    }
+    header h1{margin:0 0 4px;font-size:24px}
+    header p{margin:0;opacity:.92;font-size:13px}
+    nav{margin-top:8px}
+    nav a{
+      display:inline-block;margin:0 8px;padding:9px 12px;border-radius:999px;
+      color:#fff;text-decoration:none;background:rgba(255,255,255,.12)
+    }
+    nav a:hover{background:rgba(255,255,255,.2)}
+
+    /* ===== Khối nội dung ===== */
+    .container{
+      max-width:1040px;margin:24px auto;padding:18px;background:#fff;
+      border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow)
+    }
+    h2{color:#0f766e;text-align:center;margin:8px 0 16px}
+    .contact-info{text-align:center;margin-bottom:12px;color:#374151}
+
+    /* Đổi sang lưới để tạo khoảng cách rõ ràng 2 khối */
+    .contact-layout{
+      display:grid;
+      grid-template-columns:1fr 1fr;   /* form | map */
+      gap:28px;                        /* <-- khoảng cách giữa hai khối */
+      align-items:start;               /* tránh bản đồ “tràn” đè form */
+      margin-top:10px;
+    }
+    .contact-form,.map-wrap{min-width:0} /* chống tràn nội dung */
+    label{font-weight:700;margin:8px 0 4px;display:block}
+    input,textarea{
+      width:100%;padding:11px;border:1px solid var(--border);
+      border-radius:10px;font-size:15px
+    }
+    textarea{min-height:120px;resize:vertical}
+    button{
+      margin-top:10px;padding:12px 16px;border:none;border-radius:10px;
+      background:linear-gradient(135deg,var(--primary),var(--blue));color:#fff;cursor:pointer
+    }
+    button:hover{filter:brightness(1.05)}
+    .map-iframe{
+      width:100%;height:360px;border:0;border-radius:12px;display:block
+    }
+
+    /* ===== Footer ===== */
+    footer{
+      background:#0b3b36;color:#e6fffb;text-align:center;padding:14px 10px;margin-top:24px
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width:768px){
+      header h1{font-size:20px}
+      .contact-layout{
+        grid-template-columns:1fr;     /* xếp dọc trên mobile */
+        gap:18px;
+      }
+      .map-wrap{margin-top:4px}        /* thêm chút “thở” khi xếp dọc */
+      .map-iframe{height:300px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>HỘ KINH DOANH TẠP HÓA GIA BẢO</h1>
+    <p>Bán lẻ hàng hóa tổng hợp – Xã Nam Hồng, Tiền Hải, Thái Bình</p>
+    <nav>
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+    <a href="san-pham.html">Sản phẩm</a>
+    <a href="lien-he.html">Liên hệ</a>
+</nav>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Liên hệ với chúng tôi</h2>
+      <div class="contact-info">
+        <p><b>Địa chỉ:</b> Xóm 2, Thôn Đông Biên Bắc, Xã Nam Hồng, Huyện Tiền Hải, Tỉnh Thái Bình, Việt Nam</p>
+        <p><b>Điện thoại:</b> <a href="tel:0335627087">0335 627 087</a> • <b>Email:</b> contact@taphoagiabao.site</p>
+      </div>
+
+      <div class="contact-layout">
+        <!-- Form -->
+        <div class="contact-form">
+          <form action="mailto:contact@giabao.example" method="post" enctype="text/plain">
+            <label for="name">Họ và tên</label>
+            <input id="name" name="name" type="text" placeholder="Nhập họ và tên" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Nhập email" required>
+
+            <label for="msg">Nội dung</label>
+            <textarea id="msg" name="message" placeholder="Nhập nội dung liên hệ..." required></textarea>
+
+            <button type="submit">Gửi liên hệ</button>
+          </form>
+        </div>
+
+        <!-- Map -->
+        <div class="map-wrap">
+          <iframe class="map-iframe"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=X%C3%B3m%202,%20%C4%90%C3%B4ng%20Bi%C3%AAn%20B%E1%BA%AFc,%20Nam%20H%E1%BB%93ng,%20Ti%E1%BB%81n%20H%E1%BA%A3i,%20Th%C3%A1i%20B%C3%ACnh&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Tạp Hóa Gia Bảo – Xóm 2, Thôn Đông Biên Bắc, Xã Nam Hồng, Huyện Tiền Hải, Tỉnh Thái Bình – SĐT: 0335627087
+  </footer>
+</body>
+</html>

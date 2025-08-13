@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giới thiệu - Tạp Hóa Gia Bảo</title>
+  <style>
+    :root{
+      --primary:#0f766e;       /* teal */
+      --blue:#2563eb;          /* blue */
+      --ink:#1f2937;           /* gray-800 */
+      --muted:#6b7280;         /* gray-500 */
+      --card:#ffffff;
+      --bg:#f7fafc;
+      --border:#e5e7eb;
+      --shadow:0 8px 28px rgba(2, 44, 34, .10);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75}
+    /* Header */
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--blue));
+      color:#fff;text-align:center;padding:18px 10px;box-shadow:var(--shadow)
+    }
+    header h1{margin:0 0 4px;font-size:24px}
+    header p{margin:0;opacity:.92;font-size:13px}
+    nav{margin-top:8px}
+    nav a{
+      display:inline-block;margin:0 8px;padding:9px 12px;border-radius:999px;
+      color:#fff;text-decoration:none;background:rgba(255,255,255,.14)
+    }
+    nav a:hover{background:rgba(255,255,255,.22)}
+
+    .wrap{max-width:1040px;margin:auto;padding:18px}
+    .hero{
+      width:100%;max-height:460px;object-fit:cover;border-radius:16px;
+      border:1px solid var(--border);box-shadow:var(--shadow)
+    }
+    h2.section-title{
+      color:var(--primary);text-align:center;margin:24px 0 6px;font-size:24px
+    }
+    .lead{
+      max-width:860px;margin:0 auto 18px;text-align:center;color:var(--muted)
+    }
+
+    /* Khối câu chuyện + ảnh đôi */
+    .about{
+      background:var(--card);border:1px solid var(--border);border-radius:16px;
+      box-shadow:var(--shadow);padding:20px;margin-top:18px
+    }
+    .about-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;align-items:center}
+    .about p{margin:8px 0}
+    .photo-stack{
+      display:grid;grid-template-columns:1fr 1fr;gap:10px
+    }
+    .photo-stack img{
+      width:100%;height:180px;object-fit:cover;border-radius:12px;border:1px solid var(--border)
+    }
+
+    /* Giá trị cốt lõi */
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .value{
+      background:var(--card);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);
+      padding:16px;text-align:center
+    }
+    .value h3{margin:6px 0 4px;color:var(--primary)}
+    .value p{margin:0;color:var(--ink)}
+
+    /* Cam kết dịch vụ */
+    .commit{
+      background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);
+      padding:18px;margin-top:18px
+    }
+    .commit ul{margin:8px 0;padding-left:20px}
+    .commit li{margin:6px 0}
+
+    /* Bộ sưu tập */
+    .gallery{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px
+    }
+    .gallery img{
+      width:100%;height:200px;object-fit:cover;border-radius:12px;border:1px solid var(--border)
+    }
+
+    /* CTA */
+    .cta{
+      margin:22px auto 10px;max-width:860px;text-align:center
+    }
+    .cta a.button{
+      display:inline-block;background:linear-gradient(135deg,var(--primary),var(--blue));
+      color:#fff;text-decoration:none;padding:12px 18px;border-radius:12px;box-shadow:var(--shadow)
+    }
+    .cta a.button:hover{filter:brightness(1.05)}
+
+    footer{background:#0b3b36;color:#e6fffb;text-align:center;padding:14px 10px;margin-top:26px}
+
+    img{max-width:100%;height:auto}
+
+    /* Responsive */
+    @media (max-width:992px){
+      .values{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:768px){
+      header h1{font-size:20px}
+      .about-grid{grid-template-columns:1fr}
+      .values{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1>HỘ KINH DOANH TẠP HÓA GIA BẢO</h1>
+  <p>Bán lẻ hàng hóa tổng hợp – Xã Nam Hồng, Tiền Hải, Thái Bình</p>
+    <nav>
+<nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="gioi-thieu.html">Giới thiệu</a>
+    <a href="san-pham.html">Sản phẩm</a>
+    <a href="lien-he.html">Liên hệ</a>
+</nav>
+
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- Hero -->
+
+
+    <h2 class="section-title">Câu chuyện Gia Bảo</h2>
+    <p class="lead">
+      Từ một cửa hàng nhỏ trong xóm, Gia Bảo lớn dần nhờ niềm tin của bà con: “cần là có – mua là yên tâm”.
+      Chúng tôi tập trung các mặt hàng thiết yếu, giá hợp lý, nguồn gốc rõ ràng và phục vụ chu đáo mỗi ngày.
+    </p>
+
+    <!-- About block -->
+    <section class="about">
+      <div class="about-grid">
+        <div>
+          <h3 style="color:var(--primary);margin:0 0 6px;">Gần gũi & Tiện lợi</h3>
+          <p>
+            Gia Bảo ưu tiên những sản phẩm đi cùng nhu cầu hằng ngày: gạo, mì, dầu ăn, gia vị, đồ uống – sữa,
+            bánh kẹo, hoá mỹ phẩm và đồ gia dụng. Hàng được sắp xếp khoa học để bạn dễ tìm – dễ chọn.
+          </p>
+          <p>
+            Chúng tôi tin rằng một cửa hàng tạp hóa tốt là nơi bạn có thể ghé nhanh lúc bận rộn,
+            nhưng vẫn nhận được sự tư vấn tận tình và chất lượng đúng như cam kết.
+          </p>
+          <p style="color:var(--muted);margin-top:6px;">
+            Mỗi phản hồi của khách hàng đều được lắng nghe – đó là cách Gia Bảo hoàn thiện từng ngày.
+          </p>
+        </div>
+        <div class="photo-stack">
+          <img src="images/about-inside.jpg" alt="Kệ hàng bên trong cửa hàng" loading="lazy">
+          <img src="images/about-shelves.jpg" alt="Sắp xếp ngăn nắp, dễ tìm" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Core values -->
+    <h2 class="section-title">Giá trị cốt lõi</h2>
+    <p class="lead">Những điều chúng tôi theo đuổi để xứng đáng với niềm tin của khách hàng địa phương.</p>
+    <section class="values">
+      <article class="value">
+        <div style="font-size:28px">✅</div>
+        <h3>Chất lượng chuẩn</h3>
+        <p>Ưu tiên thương hiệu uy tín, hạn dùng rõ ràng, bảo quản đúng quy cách.</p>
+      </article>
+      <article class="value">
+        <div style="font-size:28px">💬</div>
+        <h3>Tư vấn thân thiện</h3>
+        <p>Gợi ý sản phẩm phù hợp, luôn tôn trọng lựa chọn và ngân sách của bạn.</p>
+      </article>
+      <article class="value">
+        <div style="font-size:28px">🚚</div>
+        <h3>Tiện ích cộng đồng</h3>
+        <p>Nhận giao quanh khu vực, đặt trước/giữ hàng và hỗ trợ khi cần.</p>
+      </article>
+    </section>
+
+    <!-- Commitments -->
+    <section class="commit">
+      <h2 class="section-title" style="margin-top:0">Cam kết phục vụ</h2>
+      <ul>
+        <li>Hàng thiết yếu đa dạng – có mặt đúng lúc bạn cần.</li>
+        <li>Báo giá rõ ràng, niêm yết và cập nhật theo thị trường.</li>
+        <li>Đổi trả linh hoạt với sản phẩm lỗi từ nhà sản xuất.</li>
+        <li>Giữ vệ sinh, sắp xếp gọn gàng để mỗi lần ghé đều thoải mái.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <h2 class="section-title">Góc cửa hàng</h2>
+    <p class="lead">Một vài khoảnh khắc thường ngày tại Gia Bảo.</p>
+    <section class="gallery">
+      <img src="images/about-delivery.jpg"  alt="Nhận hàng & kiểm kê" loading="lazy">
+      <img src="images/about-team.jpg"      alt="Phục vụ thân thiện" loading="lazy">
+      <img src="images/about-clients.jpg"   alt="Khách hàng thân thiết" loading="lazy">
+    </section>
+
+    <!-- CTA -->
+    <div class="cta">
+      <p class="lead">Cần tìm sản phẩm cụ thể hoặc muốn đặt trước? Chúng tôi sẵn sàng hỗ trợ.</p>
+      <a class="button" href="lien-he.html">Liên hệ Gia Bảo</a>
+    </div>
+  </main>
+
+  <footer>© 2025 Tạp Hóa Gia Bảo – Xóm 2, Thôn Đông Biên Bắc, Xã Nam Hồng, Huyện Tiền Hải, Tỉnh Thái Bình, Viêt Nam - SĐT: 0335627087</footer>
+</body>
+</html>
